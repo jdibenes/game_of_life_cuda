@@ -22,7 +22,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-INCLUDEPATH += usr/local/cuda-12.9/include
+INCLUDEPATH += usr/local/cuda-12.4/include
 
 SOURCES += \
     main.cpp \
@@ -49,7 +49,7 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
-LIBS = -L/usr/local/cuda-12.9/lib64 -lcuda -lcudart
+LIBS = -L/usr/local/cuda-12.4/lib64 -lcuda -lcudart
 
 CUDA_SOURCES = \
     cudagolgrid.cu \
@@ -59,6 +59,6 @@ CUDA_SOURCES = \
 
 cuda.input = CUDA_SOURCES
 cuda.output = ${QMAKE_FILE_BASE}.o
-cuda.commands = /usr/local/cuda-12.9/bin/nvcc ${QMAKE_FILE_NAME} -I. -I/usr/include -c -o ${QMAKE_FILE_OUT} --ptxas-options=-v -arch=sm_61
+cuda.commands = /usr/local/cuda-12.4/bin/nvcc ${QMAKE_FILE_NAME} -I. -I/usr/include -c -o ${QMAKE_FILE_OUT} --ptxas-options=-v -arch=sm_61
 
 QMAKE_EXTRA_COMPILERS += cuda
