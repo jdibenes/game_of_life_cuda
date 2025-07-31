@@ -1,13 +1,15 @@
 # Game of Life CUDA
 
-OpenGL/CUDA implementation of Conway's Game of Life.
+OpenGL / CUDA implementation of Conway's Game of Life.
 Uses Qt 6.7 for the GUI.
+
+![demo](app.png)
+
+# Build
 
 Tested on NVIDIA RTX 5000 GPU:
 - Windows 10 MSVC 2019 CUDA 12.4
 - Ubuntu 22.04 gcc 11.4.0 CUDA 12.4
-
-# Build
 
 1. Install CUDA and Qt 6.
 2. Open the .pro project file (there is one for Windows and one for Linux) in QtCreator.
